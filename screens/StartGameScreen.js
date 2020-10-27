@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   Alert,
   Button,
+  Dimensions,
   Keyboard,
   StyleSheet,
   TouchableWithoutFeedback,
@@ -111,8 +112,9 @@ const styles = StyleSheet.create({
     fontFamily: "open-sans-bold",
   },
   inputContainer: {
-    width: 300,
-    maxWidth: "80%",
+    width: "80%",
+    maxWidth: "95%",
+    minWidth: 300,
     alignItems: "center",
   },
   input: {
@@ -126,7 +128,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   button: {
-    width: 80,
+    // width: 80,
+    width: Dimensions.get("window").width / 4,
   },
   summaryContainer: {
     marginTop: 20,
